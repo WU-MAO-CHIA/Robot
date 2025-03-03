@@ -1,95 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-02-25T23:30:18.512197" rpa="false" schemaversion="5">
-<suite id="s1" name="測試 Settings Name" source="C:\Users\mark\Desktop\Robot\test.robot">
-<kw name="Log To Console" owner="BuiltIn" type="SETUP">
-<arg>message=Print Suite Setup</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-25T23:30:18.536012" elapsed="0.000000"/>
-</kw>
-<test id="s1-t1" name="Test Case 001" line="20">
+<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-03-04T00:00:32.865880" rpa="false" schemaversion="5">
+<suite id="s1" name="Control Structure" source="c:\Users\mark\Desktop\Robot\Control_Structure.robot">
+<test id="s1-t1" name="Test Case 001" line="11">
+<if>
+<branch type="IF" condition="'${fruit}' == 'apple'">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>message=Print Test Case 001</arg>
+<arg>message= I have a apple</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-25T23:30:18.537048" elapsed="0.000515"/>
+<status status="NOT RUN" start="2025-03-04T00:00:32.889254" elapsed="0.000999"/>
 </kw>
-<kw name="Sum Two Number">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-25T23:30:18.538587" level="INFO">${sum} = 3</msg>
-<var>${sum}</var>
-<arg>${num1}+${num2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-25T23:30:18.538075" elapsed="0.000512"/>
-</kw>
-<return>
-<value>${sum}</value>
-<status status="PASS" start="2025-02-25T23:30:18.538587" elapsed="0.000000"/>
-</return>
-<msg time="2025-02-25T23:30:18.539099" level="INFO">${sum} = 3</msg>
-<var>${sum}</var>
-<arg>num1=1</arg>
-<arg>num2=2</arg>
-<status status="PASS" start="2025-02-25T23:30:18.538075" elapsed="0.001024"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<arg>first=${sum}</arg>
-<arg>second=${3}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-02-25T23:30:18.539099" elapsed="0.000511"/>
-</kw>
-<timeout value="5 minutes"/>
-<status status="PASS" start="2025-02-25T23:30:18.536529" elapsed="0.003593"/>
-</test>
-<test id="s1-t2" name="Test Case 002" line="25">
+<status status="NOT RUN" start="2025-03-04T00:00:32.889254" elapsed="0.000999"/>
+</branch>
+<branch type="ELSE IF" condition="'${fruit}' == 'bananas'">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>message=Print Test Case 002</arg>
+<arg>message= I have a bananas</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-25T23:30:18.540637" elapsed="0.000525"/>
+<status status="PASS" start="2025-03-04T00:00:32.890253" elapsed="0.001030"/>
 </kw>
-<kw name="Sum Two Number">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-25T23:30:18.542190" level="INFO">${sum} = 6</msg>
-<var>${sum}</var>
-<arg>${num1}+${num2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-25T23:30:18.541677" elapsed="0.000513"/>
+<status status="PASS" start="2025-03-04T00:00:32.890253" elapsed="0.001030"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= I have a ${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-03-04T00:00:32.891283" elapsed="0.000000"/>
 </kw>
-<return>
-<value>${sum}</value>
-<status status="PASS" start="2025-02-25T23:30:18.542190" elapsed="0.000000"/>
-</return>
-<msg time="2025-02-25T23:30:18.542190" level="INFO">${sum} = 6</msg>
-<var>${sum}</var>
-<arg>num1=3</arg>
-<arg>num2=3</arg>
-<status status="PASS" start="2025-02-25T23:30:18.541162" elapsed="0.001028"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-02-25T23:30:18.543225" level="FAIL">6 != 7</msg>
-<arg>first=${sum}</arg>
-<arg>second=${7}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="FAIL" start="2025-02-25T23:30:18.542190" elapsed="0.001035">6 != 7</status>
-</kw>
-<timeout value="5 minutes"/>
-<status status="FAIL" start="2025-02-25T23:30:18.540122" elapsed="0.003103">6 != 7</status>
+<status status="NOT RUN" start="2025-03-04T00:00:32.891283" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-03-04T00:00:32.889254" elapsed="0.002029"/>
+</if>
+<timeout value="5 seconds"/>
+<status status="PASS" start="2025-03-04T00:00:32.889254" elapsed="0.002029"/>
 </test>
-<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
-<arg>message=Print Suite Teardown</arg>
+<test id="s1-t2" name="Test Case 002" line="20">
+<if>
+<branch type="IF" condition="'${fruit}' == 'apple'">
+<if>
+<branch type="IF" condition="${price} &lt; 100">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= Buy!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-25T23:30:18.543738" elapsed="0.000516"/>
+<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
 </kw>
-<doc>My First Robot Framework</doc>
-<meta name="測試 Metadata">Metadata 測試</meta>
-<status status="FAIL" start="2025-02-25T23:30:18.512719" elapsed="0.031535"/>
+<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= Too expensive!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= No need to buy</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
+</kw>
+<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
+</branch>
+<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
+</if>
+<timeout value="5 seconds"/>
+<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
+</test>
+<test id="s1-t3" name="Test Case 003" line="31">
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= ${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.000996"/>
+</kw>
+<var name="${fruit}">apple</var>
+<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.000996"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= ${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T00:00:32.895252" elapsed="0.001002"/>
+</kw>
+<var name="${fruit}">banana</var>
+<status status="PASS" start="2025-03-04T00:00:32.895252" elapsed="0.001002"/>
+</iter>
+<var>${fruit}</var>
+<value>apple</value>
+<value>banana</value>
+<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.001998"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= ${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T00:00:32.896254" elapsed="0.000928"/>
+</kw>
+<var name="${fruit}">apple</var>
+<status status="PASS" start="2025-03-04T00:00:32.896254" elapsed="0.000928"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= ${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T00:00:32.897182" elapsed="0.000542"/>
+</kw>
+<var name="${fruit}">banana</var>
+<status status="PASS" start="2025-03-04T00:00:32.897182" elapsed="0.000542"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message= ${fruit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-04T00:00:32.897724" elapsed="0.000000"/>
+</kw>
+<var name="${fruit}">gravel</var>
+<status status="PASS" start="2025-03-04T00:00:32.897724" elapsed="0.001002"/>
+</iter>
+<var>${fruit}</var>
+<value>@{abc}</value>
+<status status="PASS" start="2025-03-04T00:00:32.896254" elapsed="0.002472"/>
+</for>
+<timeout value="5 seconds"/>
+<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.004470"/>
+</test>
+<doc>Control Structure</doc>
+<status status="PASS" start="2025-03-04T00:00:32.866880" elapsed="0.031846"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="測試 Settings Name" id="s1" pass="1" fail="1" skip="0">測試 Settings Name</stat>
+<stat name="Control Structure" id="s1" pass="3" fail="0" skip="0">Control Structure</stat>
 </suite>
 </statistics>
 <errors>
