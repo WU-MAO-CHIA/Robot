@@ -1,145 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-03-04T00:00:32.865880" rpa="false" schemaversion="5">
-<suite id="s1" name="Control Structure" source="c:\Users\mark\Desktop\Robot\Control_Structure.robot">
-<test id="s1-t1" name="Test Case 001" line="11">
-<if>
-<branch type="IF" condition="'${fruit}' == 'apple'">
+<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-03-06T23:23:41.616266" rpa="false" schemaversion="5">
+<suite id="s1" name="Listener" source="c:\Users\mark\Desktop\Robot\listener.robot">
+<test id="s1-t1" name="Test Case 001" line="5">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>message= I have a apple</arg>
+<arg>message= Print Test Case 001</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-03-04T00:00:32.889254" elapsed="0.000999"/>
+<status status="PASS" start="2025-03-06T23:23:41.654631" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-03-04T00:00:32.889254" elapsed="0.000999"/>
-</branch>
-<branch type="ELSE IF" condition="'${fruit}' == 'bananas'">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= I have a bananas</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-04T00:00:32.890253" elapsed="0.001030"/>
-</kw>
-<status status="PASS" start="2025-03-04T00:00:32.890253" elapsed="0.001030"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= I have a ${fruit}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-03-04T00:00:32.891283" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2025-03-04T00:00:32.891283" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2025-03-04T00:00:32.889254" elapsed="0.002029"/>
-</if>
-<timeout value="5 seconds"/>
-<status status="PASS" start="2025-03-04T00:00:32.889254" elapsed="0.002029"/>
+<status status="PASS" start="2025-03-06T23:23:41.653362" elapsed="0.001269"/>
 </test>
-<test id="s1-t2" name="Test Case 002" line="20">
-<if>
-<branch type="IF" condition="'${fruit}' == 'apple'">
-<if>
-<branch type="IF" condition="${price} &lt; 100">
+<test id="s1-t2" name="Test Case 002" line="8">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>message= Buy!</arg>
+<arg>message= Print Test Case 002</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-06T23:23:41.656652" elapsed="0.000409"/>
 </kw>
-<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= Too expensive!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
-</branch>
-<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
-</if>
-<status status="NOT RUN" start="2025-03-04T00:00:32.892253" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= No need to buy</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
-</kw>
-<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
-</branch>
-<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
-</if>
-<timeout value="5 seconds"/>
-<status status="PASS" start="2025-03-04T00:00:32.892253" elapsed="0.001038"/>
+<status status="PASS" start="2025-03-06T23:23:41.656135" elapsed="0.001243"/>
 </test>
-<test id="s1-t3" name="Test Case 003" line="31">
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= ${fruit}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.000996"/>
-</kw>
-<var name="${fruit}">apple</var>
-<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.000996"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= ${fruit}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-04T00:00:32.895252" elapsed="0.001002"/>
-</kw>
-<var name="${fruit}">banana</var>
-<status status="PASS" start="2025-03-04T00:00:32.895252" elapsed="0.001002"/>
-</iter>
-<var>${fruit}</var>
-<value>apple</value>
-<value>banana</value>
-<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.001998"/>
-</for>
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= ${fruit}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-04T00:00:32.896254" elapsed="0.000928"/>
-</kw>
-<var name="${fruit}">apple</var>
-<status status="PASS" start="2025-03-04T00:00:32.896254" elapsed="0.000928"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= ${fruit}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-04T00:00:32.897182" elapsed="0.000542"/>
-</kw>
-<var name="${fruit}">banana</var>
-<status status="PASS" start="2025-03-04T00:00:32.897182" elapsed="0.000542"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message= ${fruit}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-03-04T00:00:32.897724" elapsed="0.000000"/>
-</kw>
-<var name="${fruit}">gravel</var>
-<status status="PASS" start="2025-03-04T00:00:32.897724" elapsed="0.001002"/>
-</iter>
-<var>${fruit}</var>
-<value>@{abc}</value>
-<status status="PASS" start="2025-03-04T00:00:32.896254" elapsed="0.002472"/>
-</for>
-<timeout value="5 seconds"/>
-<status status="PASS" start="2025-03-04T00:00:32.894256" elapsed="0.004470"/>
-</test>
-<doc>Control Structure</doc>
-<status status="PASS" start="2025-03-04T00:00:32.866880" elapsed="0.031846"/>
+<doc>Test Listener</doc>
+<status status="PASS" start="2025-03-06T23:23:41.626482" elapsed="0.030896"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Control Structure" id="s1" pass="3" fail="0" skip="0">Control Structure</stat>
+<stat name="Listener" id="s1" pass="2" fail="0" skip="0">Listener</stat>
 </suite>
 </statistics>
 <errors>
