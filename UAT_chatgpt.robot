@@ -7,7 +7,7 @@ ${PLATFORM_NAME}    Android
 ${DEVICE_NAME}    Android
 ${APP_PACKAGE}    com.sinopac.newmobilebank.uat
 ${APP_ACTIVITY}    .OnlineBanking
-${ID_NUMBER}    A1234567890
+${ID_NUMBER}    A1510200200
 ${USER_CODE}    a12345
 ${PASSWORD}    b12345
 
@@ -42,8 +42,8 @@ Handle Debugger Popup
     Click Element    xpath=//android.widget.Button[@resource-id="android:id/button2"]
 
 Handle Notification Permission
-    Wait Until Element Is Visible    xpath=//android.widget.Button[contains(@text,"允許")]    10s
-    Click Element    xpath=//android.widget.Button[contains(@text,"允許")] # 改xpath
+    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"] 10s
+    Click Element    xpath=//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
 
 Accept Terms
     Wait Until Element Is Visible    xpath=//android.widget.Button[contains(@text,"同意")]    10s
