@@ -25,6 +25,10 @@ ${INVEST_AMOUNT}    30000
     Perform Fund Transaction
     Verify Transaction Success
 
+Test Case 2
+    ${sum} =    Sum Two Number    num1=2    num2=9
+    Should Be Equal As Integers    first=${sum}    second=${11} 
+
 *** Keywords ***
 Launch App
     Open Application    ${REMOTE_URL}
@@ -171,3 +175,8 @@ Start Recording
 
 Stop Recording
     Stop Screen Recording
+
+Sum Two Number
+    [Arguments]    ${num1}    ${num2}=1
+    ${sum} =    Evaluate    ${num1}+${num2}
+    RETURN    ${sum}
