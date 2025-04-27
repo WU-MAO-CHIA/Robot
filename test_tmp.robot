@@ -12,7 +12,7 @@ ${APP_ACTIVITY}    .OnlineBanking
 ${ID_NUMBER}    E151798250
 ${USER_CODE}    a12345
 ${PASSWORD}    b12345
-${FUND_NAME}    ＰＧＩＭ保德信科技島基金(UF3)
+${FUND_NAME}    永豐ESG全球數位基礎建設基金(南非幣)(月配)(DD3)
 ${INVEST_AMOUNT}    30000
 
 *** Test Cases ***
@@ -108,12 +108,20 @@ Perform Fund Transaction
     Wait Until Element Is Visible     xpath=//android.widget.EditText[@text="請輸入關鍵字"]    10s
     Input Text    xpath=//android.widget.EditText[@text="請輸入關鍵字"]    ${FUND_NAME}
 
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="ＰＧＩＭ保德信科技島基金(UF3)"]    10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@text="${FUND_NAME}"]    10s
     Click Element    xpath=//android.widget.TextView[@text="${FUND_NAME}"]
 
     Wait Until Page Contains Element    xpath=//android.widget.Button[@text="立即申購"]    10s
     Click Element    xpath=//android.widget.Button[@text="立即申購"]
-    
+
+    # 確認世貿分行活期儲蓄存款
+    Wait Until Page Contains Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]    10s
+    Click Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]
+
+    # 點擊松山分行外幣組合存款
+    Wait Until Page Contains Element    xpath=//android.widget.TextView[@text="松山分行外幣組合存款 - 南非幣 ZAR"]    10s
+    Click Element    xpath=//android.widget.TextView[@text="松山分行外幣組合存款 - 南非幣 ZAR"]
+
     # 輸入投資金額
     Wait Until Page Contains Element    xpath=//android.widget.EditText[@text="請輸入投資金額"]    10s
     Input Text    xpath=//android.widget.EditText[@text="請輸入投資金額"]    ${INVEST_AMOUNT}
@@ -139,6 +147,9 @@ Perform Fund Transaction
     Wait Until Page Contains Element    xpath=(//android.widget.Button[@text="下一步"])[2]   10s
     Click Element    xpath=(//android.widget.Button[@text="下一步"])[2]
     # 4
+    Wait Until Page Contains Element    xpath=(//android.widget.Button[@text="下一步"])[2]   10s
+    Click Element    xpath=(//android.widget.Button[@text="下一步"])[2]
+    # 5
     Wait Until Page Contains Element    xpath=//android.widget.Button[@text="本人詳閱且同意"]   10s
     Click Element    xpath=//android.widget.Button[@text="本人詳閱且同意"]
     
