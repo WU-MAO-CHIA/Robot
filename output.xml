@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-04-18T00:11:00.339574" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-04-27T22:38:59.186119" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Tmp" source="C:\Users\mark\Desktop\Robot\test_tmp.robot">
-<test id="s1-t1" name="登入到基金交易成功測試" line="17">
+<kw name="LaunchAndLogin" type="SETUP">
 <kw name="Launch App">
 <kw name="Open Application" owner="AppiumLibrary">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2025-04-18T00:11:06.420679" level="FAIL">No application is open</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2025-04-18T00:11:06.420679" elapsed="0.001999">No application is open</status>
-</kw>
-<msg time="2025-04-18T00:11:06.424182" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg time="2025-04-18T00:11:06.424182" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-Stacktrace:
-UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-    at getResponseForW3CError (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
-    at asyncHandler (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</msg>
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
 <arg>automationName=uiautomator2</arg>
@@ -37,80 +18,476 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="FAIL" start="2025-04-18T00:11:00.527209" elapsed="5.896973">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-Stacktrace:
-UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-    at getResponseForW3CError (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
-    at asyncHandler (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
+<status status="PASS" start="2025-04-27T22:39:00.192778" elapsed="8.124743"/>
 </kw>
-<status status="FAIL" start="2025-04-18T00:11:00.526209" elapsed="5.898976">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-Stacktrace:
-UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-    at getResponseForW3CError (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
-    at asyncHandler (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
+<status status="PASS" start="2025-04-27T22:39:00.191778" elapsed="8.125743"/>
 </kw>
 <kw name="Start Recording">
-<status status="NOT RUN" start="2025-04-18T00:11:06.425185" elapsed="0.000000"/>
+<kw name="Start Screen Recording" owner="AppiumLibrary">
+<doc>Starts an asynchronous Screen Recording for the current open application.</doc>
+<status status="PASS" start="2025-04-27T22:39:08.318519" elapsed="0.820056"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:39:08.318519" elapsed="0.820056"/>
 </kw>
 <kw name="Login">
-<status status="NOT RUN" start="2025-04-18T00:11:06.425185" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:10.691295" level="INFO">xpath criteria: //android.widget.EditText[@text="ID/統一編號"]</msg>
+<arg>xpath=//android.widget.EditText[@text="ID/統一編號"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-04-27T22:39:09.139576" elapsed="1.551719"/>
 </kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:10.693295" level="INFO">Typing text 'E151798250' into text field 'xpath=//android.widget.EditText[@text="ID/統一編號"]'</msg>
+<msg time="2025-04-27T22:39:11.552999" level="INFO">xpath criteria: //android.widget.EditText[@text="ID/統一編號"]</msg>
+<arg>xpath=//android.widget.EditText[@text="ID/統一編號"]</arg>
+<arg>${ID_NUMBER}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:39:10.692294" elapsed="0.860705"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:11.555511" level="INFO">Typing text 'a12345' into text field 'xpath=//android.widget.EditText[@text="6~20 位使用者代碼"]'</msg>
+<msg time="2025-04-27T22:39:12.736542" level="INFO">xpath criteria: //android.widget.EditText[@text="6~20 位使用者代碼"]</msg>
+<arg>xpath=//android.widget.EditText[@text="6~20 位使用者代碼"]</arg>
+<arg>${USER_CODE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:39:11.552999" elapsed="1.183543"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:12.739050" level="INFO">Typing text 'b12345' into text field 'xpath=//android.widget.EditText[@text="6~20 位網路密碼"]'</msg>
+<msg time="2025-04-27T22:39:13.982520" level="INFO">xpath criteria: //android.widget.EditText[@text="6~20 位網路密碼"]</msg>
+<arg>xpath=//android.widget.EditText[@text="6~20 位網路密碼"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:39:12.737541" elapsed="1.244979"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:13.985027" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="登入"]'.</msg>
+<msg time="2025-04-27T22:39:15.626369" level="INFO">xpath criteria: //android.widget.Button[@text="登入"]</msg>
+<arg>xpath=//android.widget.Button[@text="登入"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:39:13.982520" elapsed="1.643849"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:39:09.138575" elapsed="6.488793"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:39:00.191778" elapsed="15.435590"/>
+</kw>
+<test id="s1-t1" name="登入到基金交易成功測試" line="19">
 <kw name="Navigate To Fund Transaction">
-<status status="NOT RUN" start="2025-04-18T00:11:06.425185" elapsed="0.000000"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:43.669691" level="INFO">xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]
+xpath criteria: //android.widget.TextView[@text="更多"]</msg>
+<arg>xpath=//android.widget.TextView[@text="更多"]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:39:15.630883" elapsed="28.038808"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:43.671695" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="更多"]'.</msg>
+<msg time="2025-04-27T22:39:44.905907" level="INFO">xpath criteria: //android.widget.TextView[@text="更多"]</msg>
+<arg>xpath=//android.widget.TextView[@text="更多"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:39:43.669691" elapsed="1.236216"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:51.521826" level="INFO">xpath criteria: //android.widget.Button[@text="投資"]
+xpath criteria: //android.widget.Button[@text="投資"]</msg>
+<arg>xpath=//android.widget.Button[@text="投資"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:39:44.905907" elapsed="6.615919"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:51.524329" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="投資"]'.</msg>
+<msg time="2025-04-27T22:39:56.421964" level="INFO">xpath criteria: //android.widget.Button[@text="投資"]</msg>
+<arg>xpath=//android.widget.Button[@text="投資"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:39:51.521826" elapsed="4.900138"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:56.846103" level="INFO">xpath criteria: (//android.widget.Button[@text="Button"])[4]</msg>
+<arg>xpath=(//android.widget.Button[@text="Button"])[4]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:39:56.421964" elapsed="0.425141"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:39:56.849104" level="INFO">Clicking element 'xpath=(//android.widget.Button[@text="Button"])[4]'.</msg>
+<msg time="2025-04-27T22:39:58.703750" level="INFO">xpath criteria: (//android.widget.Button[@text="Button"])[4]</msg>
+<arg>xpath=(//android.widget.Button[@text="Button"])[4]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:39:56.847105" elapsed="1.856645"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:39:15.630883" elapsed="43.072867"/>
 </kw>
 <kw name="Perform Fund Transaction">
-<status status="NOT RUN" start="2025-04-18T00:11:06.426183" elapsed="0.000000"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:11.532380" level="INFO">xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]
+xpath criteria: //android.widget.Button[@text="搜尋基金"]</msg>
+<arg>xpath=//android.widget.Button[@text="搜尋基金"]</arg>
+<arg>20s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:39:58.705759" elapsed="12.826621"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:11.534893" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="搜尋基金"]'.</msg>
+<msg time="2025-04-27T22:40:12.317149" level="INFO">xpath criteria: //android.widget.Button[@text="搜尋基金"]</msg>
+<arg>xpath=//android.widget.Button[@text="搜尋基金"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:11.533380" elapsed="0.783769"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:14.611495" level="INFO">xpath criteria: //android.widget.TextView[@text="ＰＧＩＭ保德信大中華基金(UF4)"]
+xpath criteria: //android.widget.TextView[@text="ＰＧＩＭ保德信大中華基金(UF4)"]</msg>
+<arg>xpath=//android.widget.TextView[@text="ＰＧＩＭ保德信大中華基金(UF4)"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-04-27T22:40:12.317149" elapsed="2.294346"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:14.613999" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="ＰＧＩＭ保德信大中華基金(UF4)"]'.</msg>
+<msg time="2025-04-27T22:40:16.258653" level="INFO">xpath criteria: //android.widget.TextView[@text="ＰＧＩＭ保德信大中華基金(UF4)"]</msg>
+<arg>xpath=//android.widget.TextView[@text="ＰＧＩＭ保德信大中華基金(UF4)"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:14.611495" elapsed="1.647158"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:16.561491" level="INFO">xpath criteria: //android.widget.EditText[@text="請輸入關鍵字"]</msg>
+<arg>xpath=//android.widget.EditText[@text="請輸入關鍵字"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-04-27T22:40:16.258653" elapsed="0.302838"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:16.563999" level="INFO">Typing text 'ＰＧＩＭ保德信科技島基金(UF3)' into text field 'xpath=//android.widget.EditText[@text="請輸入關鍵字"]'</msg>
+<msg time="2025-04-27T22:40:17.348191" level="INFO">xpath criteria: //android.widget.EditText[@text="請輸入關鍵字"]</msg>
+<arg>xpath=//android.widget.EditText[@text="請輸入關鍵字"]</arg>
+<arg>${FUND_NAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:16.561491" elapsed="0.786700"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:18.123386" level="INFO">xpath criteria: //android.widget.TextView[@text="ＰＧＩＭ保德信科技島基金(UF3)"]</msg>
+<arg>xpath=//android.widget.TextView[@text="ＰＧＩＭ保德信科技島基金(UF3)"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-04-27T22:40:17.349191" elapsed="0.774195"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:18.125395" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="ＰＧＩＭ保德信科技島基金(UF3)"]'.</msg>
+<msg time="2025-04-27T22:40:19.107798" level="INFO">xpath criteria: //android.widget.TextView[@text="ＰＧＩＭ保德信科技島基金(UF3)"]</msg>
+<arg>xpath=//android.widget.TextView[@text="${FUND_NAME}"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:18.123386" elapsed="0.985918"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:19.295523" level="INFO">xpath criteria: //android.widget.Button[@text="立即申購"]</msg>
+<arg>xpath=//android.widget.Button[@text="立即申購"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:40:19.109304" elapsed="0.186219"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:19.298523" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="立即申購"]'.</msg>
+<msg time="2025-04-27T22:40:20.477799" level="INFO">xpath criteria: //android.widget.Button[@text="立即申購"]</msg>
+<arg>xpath=//android.widget.Button[@text="立即申購"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:19.296524" elapsed="1.181275"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:32.248799" level="INFO">xpath criteria: //android.widget.EditText[@text="請輸入投資金額"]</msg>
+<arg>xpath=//android.widget.EditText[@text="請輸入投資金額"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:40:20.477799" elapsed="11.771000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:32.251797" level="INFO">Typing text '30000' into text field 'xpath=//android.widget.EditText[@text="請輸入投資金額"]'</msg>
+<msg time="2025-04-27T22:40:33.806111" level="INFO">xpath criteria: //android.widget.EditText[@text="請輸入投資金額"]</msg>
+<arg>xpath=//android.widget.EditText[@text="請輸入投資金額"]</arg>
+<arg>${INVEST_AMOUNT}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:32.248799" elapsed="1.557312"/>
+</kw>
+<kw name="Swipe By Percent" owner="AppiumLibrary">
+<arg>${0}</arg>
+<arg>${95}</arg>
+<arg>${0}</arg>
+<arg>${5}</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" start="2025-04-27T22:40:33.807111" elapsed="5.383054"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:40.056978" level="INFO">xpath criteria: //android.widget.Button[@text="下一步"]</msg>
+<arg>xpath=//android.widget.Button[@text="下一步"]</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:40:39.191165" elapsed="0.865813"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:40.059505" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="下一步"]'.</msg>
+<msg time="2025-04-27T22:40:41.048178" level="INFO">xpath criteria: //android.widget.Button[@text="下一步"]</msg>
+<arg>xpath=//android.widget.Button[@text="下一步"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:40.056978" elapsed="0.991200"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:48.769886" level="INFO">xpath criteria: //androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageView
+xpath criteria: //androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageView</msg>
+<arg>xpath=//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageView</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:40:41.048178" elapsed="7.721708"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:48.771886" level="INFO">Clicking element 'xpath=//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageView'.</msg>
+<msg time="2025-04-27T22:40:50.403355" level="INFO">xpath criteria: //androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageView</msg>
+<arg>xpath=//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageView</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:48.769886" elapsed="1.633469"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:52.233114" level="INFO">xpath criteria: //android.widget.Button[@text="滑到底"]</msg>
+<arg>xpath=//android.widget.Button[@text="滑到底"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:40:50.403355" elapsed="1.829759"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:52.235126" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="滑到底"]'.</msg>
+<msg time="2025-04-27T22:40:54.296683" level="INFO">xpath criteria: //android.widget.Button[@text="滑到底"]</msg>
+<arg>xpath=//android.widget.Button[@text="滑到底"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:52.233114" elapsed="2.063569"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:55.126170" level="INFO">xpath criteria: //android.widget.Button[@text="本人詳閱且同意"]</msg>
+<arg>xpath=//android.widget.Button[@text="本人詳閱且同意"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:40:54.296683" elapsed="0.829487"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:40:55.128170" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="本人詳閱且同意"]'.</msg>
+<msg time="2025-04-27T22:40:55.669360" level="INFO">xpath criteria: //android.widget.Button[@text="本人詳閱且同意"]</msg>
+<arg>xpath=//android.widget.Button[@text="本人詳閱且同意"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:40:55.127170" elapsed="0.542190"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:00.490966" level="INFO">xpath criteria: (//android.widget.Button[@text="下一步"])[2]
+xpath criteria: (//android.widget.Button[@text="下一步"])[2]
+xpath criteria: (//android.widget.Button[@text="下一步"])[2]
+xpath criteria: (//android.widget.Button[@text="下一步"])[2]</msg>
+<arg>xpath=(//android.widget.Button[@text="下一步"])[2]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:40:55.669360" elapsed="4.821606"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:00.493500" level="INFO">Clicking element 'xpath=(//android.widget.Button[@text="下一步"])[2]'.</msg>
+<msg time="2025-04-27T22:41:01.902919" level="INFO">xpath criteria: (//android.widget.Button[@text="下一步"])[2]</msg>
+<arg>xpath=(//android.widget.Button[@text="下一步"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:41:00.490966" elapsed="1.411953"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:07.743468" level="INFO">xpath criteria: //android.widget.Button[@text="滑到底"]
+xpath criteria: //android.widget.Button[@text="滑到底"]
+xpath criteria: //android.widget.Button[@text="滑到底"]
+xpath criteria: //android.widget.Button[@text="滑到底"]
+xpath criteria: //android.widget.Button[@text="滑到底"]</msg>
+<arg>xpath=//android.widget.Button[@text="滑到底"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:41:01.902919" elapsed="5.840549"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:07.745477" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="滑到底"]'.</msg>
+<msg time="2025-04-27T22:41:09.201201" level="INFO">xpath criteria: //android.widget.Button[@text="滑到底"]</msg>
+<arg>xpath=//android.widget.Button[@text="滑到底"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:41:07.743468" elapsed="1.457733"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:10.112383" level="INFO">xpath criteria: (//android.widget.Button[@text="下一步"])[2]</msg>
+<arg>xpath=(//android.widget.Button[@text="下一步"])[2]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:41:09.201201" elapsed="0.911182"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:10.114390" level="INFO">Clicking element 'xpath=(//android.widget.Button[@text="下一步"])[2]'.</msg>
+<msg time="2025-04-27T22:41:11.312526" level="INFO">xpath criteria: (//android.widget.Button[@text="下一步"])[2]</msg>
+<arg>xpath=(//android.widget.Button[@text="下一步"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:41:10.112383" elapsed="1.200143"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:11.580901" level="INFO">xpath criteria: //android.widget.Button[@text="本人詳閱且同意"]</msg>
+<arg>xpath=//android.widget.Button[@text="本人詳閱且同意"]</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:41:11.313532" elapsed="0.267369"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:11.583415" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="本人詳閱且同意"]'.</msg>
+<msg time="2025-04-27T22:41:12.715954" level="INFO">xpath criteria: //android.widget.Button[@text="本人詳閱且同意"]</msg>
+<arg>xpath=//android.widget.Button[@text="本人詳閱且同意"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:41:11.580901" elapsed="1.135053"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:13.422363" level="INFO">xpath criteria: //android.widget.Button[@text="下一步"]</msg>
+<arg>xpath=//android.widget.Button[@text="下一步"]</arg>
+<arg>20s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:41:12.715954" elapsed="0.706409"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:13.424879" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="下一步"]'.</msg>
+<msg time="2025-04-27T22:41:15.340634" level="INFO">xpath criteria: //android.widget.Button[@text="下一步"]</msg>
+<arg>xpath=//android.widget.Button[@text="下一步"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:41:13.422868" elapsed="1.917766"/>
+</kw>
+<kw name="Swipe By Percent" owner="AppiumLibrary">
+<arg>${0}</arg>
+<arg>${95}</arg>
+<arg>${0}</arg>
+<arg>${5}</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" start="2025-04-27T22:41:15.342156" elapsed="1.713286"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:28.714407" level="INFO">xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]
+xpath criteria: //android.widget.Button[@text="確認送出"]</msg>
+<arg>xpath=//android.widget.Button[@text="確認送出"]</arg>
+<arg>20s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:41:17.055442" elapsed="11.658965"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:28.716406" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="確認送出"]'.</msg>
+<msg time="2025-04-27T22:41:31.364098" level="INFO">xpath criteria: //android.widget.Button[@text="確認送出"]</msg>
+<arg>xpath=//android.widget.Button[@text="確認送出"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-04-27T22:41:28.714407" elapsed="2.649691"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:39:58.705759" elapsed="92.659346"/>
 </kw>
 <kw name="Verify Transaction Success">
-<status status="NOT RUN" start="2025-04-18T00:11:06.426183" elapsed="0.000000"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:39.752609" level="INFO">xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]
+xpath criteria: //android.widget.TextView[@text="交易成功"]</msg>
+<arg>xpath=//android.widget.TextView[@text="交易成功"]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-04-27T22:41:31.375125" elapsed="8.377484"/>
 </kw>
-<kw name="Stop Recording">
-<status status="NOT RUN" start="2025-04-18T00:11:06.426183" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T22:41:31.375125" elapsed="8.378489"/>
 </kw>
-<doc>測試銀行 App 登入到基金交易成功測試</doc>
-<status status="FAIL" start="2025-04-18T00:11:00.524206" elapsed="5.901977">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-Stacktrace:
-UnknownError: An unknown server-side error occurred while processing the command. Original error: Cannot start the 'com.sinopac.newmobilebank.uat' application. Consider checking the driver's troubleshooting documentation. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\mark\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell am start-activity -W -n com.sinopac.newmobilebank.uat/.OnlineBanking -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000' exited with code 1'; Command output: Stopping: com.sinopac.newmobilebank.uat
-Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sinopac.newmobilebank.uat/.OnlineBanking }
-Error type 3
-Error: Activity class {com.sinopac.newmobilebank.uat/com.sinopac.newmobilebank.uat.OnlineBanking} does not exist.
-
-    at getResponseForW3CError (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
-    at asyncHandler (C:\Users\mark\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
+<doc>基金交易單筆申購</doc>
+<status status="PASS" start="2025-04-27T22:39:15.627368" elapsed="144.127247"/>
 </test>
-<status status="FAIL" start="2025-04-18T00:11:00.341611" elapsed="6.085575"/>
+<kw name="Stop Recording" type="TEARDOWN">
+<kw name="Stop Screen Recording" owner="AppiumLibrary">
+<msg time="2025-04-27T22:41:42.718900" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenrecord-1.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="appium-screenrecord-1.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
+<status status="PASS" start="2025-04-27T22:41:39.808754" elapsed="2.913651"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:41:39.807753" elapsed="2.915156"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:38:59.190129" elapsed="163.532780"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test Tmp" id="s1" pass="0" fail="1" skip="0">Test Tmp</stat>
+<stat name="Test Tmp" id="s1" pass="1" fail="0" skip="0">Test Tmp</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-18T00:11:06.424182" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
