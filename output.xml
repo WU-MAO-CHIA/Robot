@@ -1,144 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-04-28T00:11:11.272037" rpa="false" schemaversion="5">
-<suite id="s1" name="Tmp" source="C:\Users\mark\Desktop\Robot\tmp.robot">
-<test id="s1-t1" name="登入到基金交易成功測試" line="19">
-<kw name="Launch App">
-<kw name="Open Application" owner="AppiumLibrary">
-<arg>${REMOTE_URL}</arg>
-<arg>platformName=${PLATFORM_NAME}</arg>
-<arg>automationName=uiautomator2</arg>
-<arg>deviceName=${DEVICE_NAME}</arg>
-<arg>appPackage=${APP_PACKAGE}</arg>
-<arg>appActivity=${APP_ACTIVITY}</arg>
-<arg>noReset=true</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://appium.io/docs/en/2.1/cli/args/
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |
-| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-04-28T00:11:11.462150" elapsed="6.674238"/>
+<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-05-12T00:15:17.828488" rpa="false" schemaversion="5">
+<suite id="s1" name="測試 Settings Name" source="c:\Users\mark\Desktop\Robot\test.robot">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>message=Print Suite Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.856029" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-28T00:11:11.462150" elapsed="6.674238"/>
+<test id="s1-t1" name="Test Case 001" line="20">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>message= Case 的 Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.857029" elapsed="0.000000"/>
 </kw>
-<kw name="Start Recording">
-<kw name="Start Screen Recording" owner="AppiumLibrary">
-<doc>Starts an asynchronous Screen Recording for the current open application.</doc>
-<status status="PASS" start="2025-04-28T00:11:18.137420" elapsed="0.485164"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=Print Test Case 001</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.858061" elapsed="0.001001"/>
 </kw>
-<status status="PASS" start="2025-04-28T00:11:18.136388" elapsed="0.486196"/>
+<kw name="Sum Two Number">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-12T00:15:17.860059" level="INFO">${sum} = 3</msg>
+<var>${sum}</var>
+<arg>${num1}+${num2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.859062" elapsed="0.002998"/>
 </kw>
-<kw name="Login">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-04-28T00:11:19.225896" level="INFO">xpath criteria: //android.widget.EditText[@text="ID/統一編號"]</msg>
-<arg>xpath=//android.widget.EditText[@text="ID/統一編號"]</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-04-28T00:11:18.622584" elapsed="0.603312"/>
+<return>
+<value>${sum}</value>
+<status status="PASS" start="2025-05-12T00:15:17.862060" elapsed="0.000000"/>
+</return>
+<msg time="2025-05-12T00:15:17.862060" level="INFO">${sum} = 3</msg>
+<var>${sum}</var>
+<arg>num1=1</arg>
+<arg>num2=2</arg>
+<status status="PASS" start="2025-05-12T00:15:17.859062" elapsed="0.002998"/>
 </kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-04-28T00:11:19.227899" level="INFO">Typing text 'E151798250' into text field 'xpath=//android.widget.EditText[@text="ID/統一編號"]'</msg>
-<msg time="2025-04-28T00:11:19.858965" level="INFO">xpath criteria: //android.widget.EditText[@text="ID/統一編號"]</msg>
-<arg>xpath=//android.widget.EditText[@text="ID/統一編號"]</arg>
-<arg>${ID_NUMBER}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-04-28T00:11:19.226898" elapsed="0.632067"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>first=${sum}</arg>
+<arg>second=${3}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.863060" elapsed="0.001001"/>
 </kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-04-28T00:11:19.859974" level="INFO">Typing text 'a12345' into text field 'xpath=//android.widget.EditText[@text="6~20 位使用者代碼"]'</msg>
-<msg time="2025-04-28T00:11:21.046920" level="INFO">xpath criteria: //android.widget.EditText[@text="6~20 位使用者代碼"]</msg>
-<arg>xpath=//android.widget.EditText[@text="6~20 位使用者代碼"]</arg>
-<arg>${USER_CODE}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-04-28T00:11:19.858965" elapsed="1.187955"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-04-28T00:11:21.047917" level="INFO">Typing text 'b12345' into text field 'xpath=//android.widget.EditText[@text="6~20 位網路密碼"]'</msg>
-<msg time="2025-04-28T00:11:21.762912" level="INFO">xpath criteria: //android.widget.EditText[@text="6~20 位網路密碼"]</msg>
-<arg>xpath=//android.widget.EditText[@text="6~20 位網路密碼"]</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-04-28T00:11:21.046920" elapsed="0.715992"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-04-28T00:11:21.764912" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="登入"]'.</msg>
-<msg time="2025-04-28T00:11:24.715406" level="INFO">xpath criteria: //android.widget.Button[@text="登入"]</msg>
-<arg>xpath=//android.widget.Button[@text="登入"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-04-28T00:11:21.763916" elapsed="2.951490"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2025-04-28T00:11:39.329920" level="INFO">xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]
-xpath criteria: //android.widget.TextView[@text="臺幣存款"]</msg>
-<arg>xpath=//android.widget.TextView[@text="臺幣存款"]</arg>
-<arg>20s</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2025-04-28T00:11:24.715406" elapsed="14.614514"/>
-</kw>
-<status status="PASS" start="2025-04-28T00:11:18.622584" elapsed="20.707336"/>
-</kw>
-<doc>新網銀登入測試</doc>
-<status status="PASS" start="2025-04-28T00:11:11.460152" elapsed="27.870766"/>
+<doc>test case 001 doc</doc>
+<tag>abc</tag>
+<tag>release</tag>
+<tag>smoke</tag>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2025-05-12T00:15:17.856029" elapsed="0.008032"/>
 </test>
-<kw name="Stop Recording" type="TEARDOWN">
-<kw name="Stop Screen Recording" owner="AppiumLibrary">
-<msg time="2025-04-28T00:11:40.284775" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenrecord-1.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="appium-screenrecord-1.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
-<doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
-<status status="PASS" start="2025-04-28T00:11:39.331918" elapsed="0.953858"/>
+<test id="s1-t2" name="Test Case 002" line="28">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>message=Setting 的 Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.866063" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-28T00:11:39.331918" elapsed="0.953858"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=Print Test Case 002</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.867060" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-28T00:11:11.273036" elapsed="29.012740"/>
+<kw name="Sum Two Number">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-12T00:15:17.868423" level="INFO">${sum} = 6</msg>
+<var>${sum}</var>
+<arg>${num1}+${num2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.868423" elapsed="0.001000"/>
+</kw>
+<return>
+<value>${sum}</value>
+<status status="PASS" start="2025-05-12T00:15:17.869423" elapsed="0.000000"/>
+</return>
+<msg time="2025-05-12T00:15:17.869423" level="INFO">${sum} = 6</msg>
+<var>${sum}</var>
+<arg>num1=3</arg>
+<arg>num2=3</arg>
+<status status="PASS" start="2025-05-12T00:15:17.867060" elapsed="0.002363"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-05-12T00:15:17.870929" level="FAIL">6 != 7</msg>
+<arg>first=${sum}</arg>
+<arg>second=${7}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2025-05-12T00:15:17.869423" elapsed="0.001506">6 != 7</status>
+</kw>
+<tag>release</tag>
+<timeout value="5 minutes"/>
+<status status="FAIL" start="2025-05-12T00:15:17.865059" elapsed="0.006872">6 != 7</status>
+</test>
+<test id="s1-t3" name="Test Case 003" line="34">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>message=Setting 的 Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.872933" elapsed="0.001000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=Print Test Case 003</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.873933" elapsed="0.000999"/>
+</kw>
+<kw name="Sum Two Number">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-12T00:15:17.875932" level="INFO">${sum} = 11</msg>
+<var>${sum}</var>
+<arg>${num1}+${num2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.875932" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${sum}</value>
+<status status="PASS" start="2025-05-12T00:15:17.875932" elapsed="0.000000"/>
+</return>
+<msg time="2025-05-12T00:15:17.875932" level="INFO">${sum} = 11</msg>
+<var>${sum}</var>
+<arg>num1=2</arg>
+<arg>num2=9</arg>
+<status status="PASS" start="2025-05-12T00:15:17.874932" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>first=${sum}</arg>
+<arg>second=${11}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.877437" elapsed="0.000000"/>
+</kw>
+<tag>abc</tag>
+<tag>release</tag>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2025-05-12T00:15:17.872933" elapsed="0.005513"/>
+</test>
+<test id="s1-t4" name="Test Case 004" line="40">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>message=Setting 的 Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.879442" elapsed="0.001003"/>
+</kw>
+<kw name="Log Template">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>msg1=${msg1}</arg>
+<arg>msg2=${msg2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.881447" elapsed="0.000999"/>
+</kw>
+<arg>msg1_1</arg>
+<arg>msg2_1</arg>
+<status status="PASS" start="2025-05-12T00:15:17.880445" elapsed="0.002001"/>
+</kw>
+<kw name="Log Template">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>msg1=${msg1}</arg>
+<arg>msg2=${msg2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.882446" elapsed="0.000999"/>
+</kw>
+<arg>msg1_2</arg>
+<arg>msg2_2</arg>
+<status status="PASS" start="2025-05-12T00:15:17.882446" elapsed="0.000999"/>
+</kw>
+<kw name="Log Template">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>msg1=${msg1}</arg>
+<arg>msg2=${msg2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.884445" elapsed="0.000998"/>
+</kw>
+<arg>msg1_3</arg>
+<arg>msg2_3</arg>
+<status status="PASS" start="2025-05-12T00:15:17.884445" elapsed="0.000998"/>
+</kw>
+<tag>abc</tag>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2025-05-12T00:15:17.879442" elapsed="0.006001"/>
+</test>
+<test id="s1-t5" name="Test Case 005" line="47">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>message=Setting 的 Test Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.887468" elapsed="0.000000"/>
+</kw>
+<kw name="Sum Two Number">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-12T00:15:17.889480" level="INFO">${sum} = 3</msg>
+<var>${sum}</var>
+<arg>${num1}+${num2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.888474" elapsed="0.001006"/>
+</kw>
+<return>
+<value>${sum}</value>
+<status status="PASS" start="2025-05-12T00:15:17.889480" elapsed="0.000000"/>
+</return>
+<msg time="2025-05-12T00:15:17.889480" level="INFO">${sum} = 3</msg>
+<var>${sum}</var>
+<arg>num1=2</arg>
+<status status="PASS" start="2025-05-12T00:15:17.888474" elapsed="0.001006"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=${sum}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.890480" elapsed="0.000000"/>
+</kw>
+<tag>abc</tag>
+<timeout value="5 minutes"/>
+<status status="PASS" start="2025-05-12T00:15:17.886950" elapsed="0.004529"/>
+</test>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>message=Print Suite Teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-12T00:15:17.892480" elapsed="0.000000"/>
+</kw>
+<doc>My First Robot Framework</doc>
+<meta name="測試 Metadata">Metadata 測試</meta>
+<status status="FAIL" start="2025-05-12T00:15:17.832488" elapsed="0.059992"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="4" fail="0" skip="0">abc</stat>
+<stat pass="2" fail="1" skip="0">release</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Tmp" id="s1" pass="1" fail="0" skip="0">Tmp</stat>
+<stat name="測試 Settings Name" id="s1" pass="4" fail="1" skip="0">測試 Settings Name</stat>
 </suite>
 </statistics>
 <errors>

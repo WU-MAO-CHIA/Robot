@@ -1,6 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
-# Suite Setup       LaunchAndLogin
+Suite Setup       LaunchAndRecord
 Suite Teardown    Stop Recording
 
 *** Variables ***
@@ -9,21 +9,15 @@ ${PLATFORM_NAME}    Android
 ${DEVICE_NAME}    Android
 ${APP_PACKAGE}    com.sinopac.newmobilebank.uat
 ${APP_ACTIVITY}    .OnlineBanking
-${ID_NUMBER}    E151798250
+${ID_NUMBER}    A1525453750
 ${USER_CODE}    a12345
 ${PASSWORD}    b12345
-${FUND_NAME}    ＰＧＩＭ保德信科技島基金(UF3)
-${INVEST_AMOUNT}    30000
 
 *** Test Cases ***
-登入到基金交易成功測試
-    [Documentation]    新網銀登入測試
-    Launch App
-    Start Recording
+APP登入測試
+    [Documentation]    APP登入測試
+    [Tags]    login    APP
     Login
-    # Navigate To Fund Transaction
-    # Perform Fund Transaction
-    # Verify Transaction Success
 
 *** Keywords ***
 Launch App
@@ -78,9 +72,12 @@ Login
 
     # 驗證是否登入成功
     Wait Until Page Contains Element    xpath=//android.widget.TextView[@text="臺幣存款"]    20s
+LaunchAndRecord
+    Launch App
+    Start Recording
 
 Start Recording
     Start Screen Recording
 
 Stop Recording
-    Stop Screen Recording
+    Stop Screen Recording    filename=login.mp4

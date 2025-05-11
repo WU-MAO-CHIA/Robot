@@ -3,6 +3,7 @@ venv/
 temp/
 .rpa/
 .idea/
+browser/*
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 .virtual_documents/
@@ -16,7 +17,9 @@ testrun/*
 .~lock*
 *.pkl
 challenge.xlsx
-.md
+*.md
 *.apk
 *.mp4
 *.gif
+__pycache__/*
+env/*

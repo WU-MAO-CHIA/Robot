@@ -9,25 +9,22 @@ ${PLATFORM_NAME}    Android
 ${DEVICE_NAME}    Android
 ${APP_PACKAGE}    com.sinopac.newmobilebank.uat
 ${APP_ACTIVITY}    .OnlineBanking
-${ID_NUMBER}    E151798250
+${ID_NUMBER}    A1525453750      # E151798250
 ${USER_CODE}    a12345
 ${PASSWORD}    b12345
-${FUND_NAME}    永豐ESG全球數位基礎建設基金(南非幣)(月配)(DD3)
+${FUND_NAME}    ＰＧＩＭ保德信科技島基金(UF3)
 ${INVEST_AMOUNT}    30000
 
 *** Test Cases ***
 登入到基金交易成功測試
     [Documentation]    基金交易單筆申購
+    [Tags]    login    APP
     # Launch App
     # Start Recording
     # Login
     Navigate To Fund Transaction
     Perform Fund Transaction
     Verify Transaction Success
-
-Test Case 2
-    ${sum} =    Sum Two Number    num1=2    num2=9
-    Should Be Equal As Integers    first=${sum}    second=${11} 
 
 *** Keywords ***
 Launch App
@@ -82,7 +79,6 @@ Login
 
     # 驗證是否登入成功
     # Wait Until Page Contains Element    xpath=//android.widget.TextView[@text="臺幣存款"]    20s
-
 LaunchAndLogin
     Launch App
     Start Recording
@@ -118,20 +114,26 @@ Perform Fund Transaction
     Wait Until Page Contains Element    xpath=//android.widget.Button[@text="立即申購"]    10s
     Click Element    xpath=//android.widget.Button[@text="立即申購"]
 
-    # 確認世貿分行活期儲蓄存款
-    Wait Until Page Contains Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]    10s
-    Click Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]
+    Wait Until Page Contains Element    xpath=//android.widget.TextView[@text="請選擇信託帳號"]   10s
+    Click Element    xpath=//android.widget.TextView[@text="請選擇信託帳號"]
 
-    # 點擊松山分行外幣組合存款
-    Wait Until Page Contains Element    xpath=//android.widget.TextView[@text="松山分行外幣組合存款 - 南非幣 ZAR"]    10s
-    Click Element    xpath=//android.widget.TextView[@text="松山分行外幣組合存款 - 南非幣 ZAR"]
+    Wait Until Page Contains Element    xpath=//android.widget.TextView[@text="竹北自強分行"]   10s
+    Click Element    xpath=//android.widget.TextView[@text="竹北自強分行"]
+
+    # 確認世貿分行活期儲蓄存款
+    # Wait Until Page Contains Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]    10s
+    # Click Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]
+
+    # # 點擊松山分行外幣組合存款
+    # Wait Until Page Contains Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]    10s
+    # Click Element    xpath=(//android.widget.TextView[@text="世貿分行活期儲蓄存款 - 新臺幣 TWD"])[1]
 
     # 輸入投資金額
     Wait Until Page Contains Element    xpath=//android.widget.EditText[@text="請輸入投資金額"]    10s
     Input Text    xpath=//android.widget.EditText[@text="請輸入投資金額"]    ${INVEST_AMOUNT}
 
     Swipe By Percent    ${0}    ${95}    ${0}    ${5}
-    Wait Until Page Contains Element    xpath=//android.widget.Button[@text="下一步"]   5s
+    Wait Until Page Contains Element    xpath=//android.widget.Button[@text="下一步"]   10s
     Click Element    xpath=//android.widget.Button[@text="下一步"]
 
     # Agree Page
@@ -151,8 +153,8 @@ Perform Fund Transaction
     Wait Until Page Contains Element    xpath=(//android.widget.Button[@text="下一步"])[2]   10s
     Click Element    xpath=(//android.widget.Button[@text="下一步"])[2]
     # 4
-    Wait Until Page Contains Element    xpath=(//android.widget.Button[@text="下一步"])[2]   10s
-    Click Element    xpath=(//android.widget.Button[@text="下一步"])[2]
+    # Wait Until Page Contains Element    xpath=(//android.widget.Button[@text="下一步"])[2]   10s
+    # Click Element    xpath=(//android.widget.Button[@text="下一步"])[2]
     # 5
     Wait Until Page Contains Element    xpath=//android.widget.Button[@text="本人詳閱且同意"]   10s
     Click Element    xpath=//android.widget.Button[@text="本人詳閱且同意"]
@@ -161,6 +163,7 @@ Perform Fund Transaction
     Click Element    xpath=//android.widget.Button[@text="下一步"]
 
     # Confirm Page
+    # wait some element util swipe
     Swipe By Percent    ${0}    ${95}    ${0}    ${5}
     Wait Until Page Contains Element    xpath=//android.widget.Button[@text="確認送出"]     20s
     Click Element    xpath=//android.widget.Button[@text="確認送出"]
