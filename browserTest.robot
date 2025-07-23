@@ -3,7 +3,7 @@ Library    Browser
 
 *** Variables ***
 ${ID}    A123456789
-${pwd}   9907mkmnK
+${pwd}   123456
 
 *** Test Cases ***
 # Verfiy Page Title
@@ -22,6 +22,6 @@ Test Example Page
     # Browser.Fill Text    //input[@id= "ctl00_ctl00_ContentPlaceHolder1_DefaultContent_MMAbe5bdfc8b5cb42c7be26df1921e81b57"]    Value= ${ID}
     # Log To Console    message= ${device}
     # Sleep    5s
-     Fill Text    //input[@class= 'style1 selectable']    ${ID}
-     Fill Text    //input[@placeholder= '使用者代碼']    ${pwd}
-     Sleep     2s
+    Fill Text    //input[@class= 'style1 selectable']    ${ID}
+    Fill Text    //input[@placeholder= '使用者代碼']    ${pwd}
+    Sleep     2s

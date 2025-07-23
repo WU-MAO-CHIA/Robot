@@ -1,228 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-05-12T00:15:17.828488" rpa="false" schemaversion="5">
-<suite id="s1" name="測試 Settings Name" source="c:\Users\mark\Desktop\Robot\test.robot">
-<kw name="Log To Console" owner="BuiltIn" type="SETUP">
-<arg>message=Print Suite Setup</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.856029" elapsed="0.000000"/>
+<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-07-24T00:11:11.847270" rpa="false" schemaversion="5">
+<suite id="s1" name="Browser" source="C:\Users\mark\Desktop\Robot\browser.robot">
+<kw name="Suite Setup" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-24T00:11:12.019922" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\mark\\Desktop\\Robot\\browser\\traces\\temp\\f9c2ea2b-fe7c-4b44-8392-33346619e498"}</msg>
+<msg time="2025-07-24T00:11:12.039190" level="INFO">Starting Browser process C:\Users\mark\Desktop\Robot\env\lib\site-packages\Browser\wrapper\index.js using port 49171</msg>
+<msg time="2025-07-24T00:11:12.039190" level="INFO">Node startup parameters: ['node', 'C:\\Users\\mark\\Desktop\\Robot\\env\\lib\\site-packages\\Browser\\wrapper\\index.js', '49171']</msg>
+<msg time="2025-07-24T00:11:12.760734" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\mark\\Desktop\\Robot\\browser\\traces\\temp\\f9c2ea2b-fe7c-4b44-8392-33346619e498"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-24T00:11:12.019922" elapsed="0.740812"/>
 </kw>
-<test id="s1-t1" name="Test Case 001" line="20">
-<kw name="Log To Console" owner="BuiltIn" type="SETUP">
-<arg>message= Case 的 Test Setup</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.857029" elapsed="0.000000"/>
+<status status="PASS" start="2025-07-24T00:11:12.018917" elapsed="0.741817"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message=Print Test Case 001</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.858061" elapsed="0.001001"/>
+<test id="s1-t1" name="Add One ToDos And Check Items" line="15">
+<kw name="Test Setup" type="SETUP">
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-24T00:11:12.768885" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg time="2025-07-24T00:11:12.787052" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-24T00:11:12.787052" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<arg>viewport= {'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-24T00:11:12.766884" elapsed="0.020168"/>
 </kw>
-<kw name="Sum Two Number">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-05-12T00:15:17.860059" level="INFO">${sum} = 3</msg>
-<var>${sum}</var>
-<arg>${num1}+${num2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.859062" elapsed="0.002998"/>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-24T00:11:13.446709" level="INFO">Successfully initialized new page object and opened url: https://mma.sinopac.com/MemberPortal/Member/MMALogin.aspx</msg>
+<arg>https://mma.sinopac.com/MemberPortal/Member/MMALogin.aspx</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-24T00:11:12.788050" elapsed="0.658659"/>
 </kw>
-<return>
-<value>${sum}</value>
-<status status="PASS" start="2025-05-12T00:15:17.862060" elapsed="0.000000"/>
-</return>
-<msg time="2025-05-12T00:15:17.862060" level="INFO">${sum} = 3</msg>
-<var>${sum}</var>
-<arg>num1=1</arg>
-<arg>num2=2</arg>
-<status status="PASS" start="2025-05-12T00:15:17.859062" elapsed="0.002998"/>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2025-07-24T00:11:13.447709" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2025-07-24T00:11:13.452893" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<status status="PASS" start="2025-07-24T00:11:13.447709" elapsed="0.005184"/>
 </kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<arg>first=${sum}</arg>
-<arg>second=${3}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.863060" elapsed="0.001001"/>
+<status status="PASS" start="2025-07-24T00:11:12.765732" elapsed="0.687161"/>
 </kw>
-<doc>test case 001 doc</doc>
-<tag>abc</tag>
-<tag>release</tag>
-<tag>smoke</tag>
-<timeout value="5 minutes"/>
-<status status="PASS" start="2025-05-12T00:15:17.856029" elapsed="0.008032"/>
+<kw name="Input Text Into ToDos">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-24T00:11:13.454893" level="INFO">Fills the text 'A128514133' in the given field.</msg>
+<arg>xpath=//input[@onclick="getFocus(1,this);"]</arg>
+<arg>${ID}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-24T00:11:13.453894" elapsed="0.037129"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-24T00:11:13.492025" level="INFO">Fills the text 'markwu0821' in the given field.</msg>
+<arg>xpath=//input[@onclick="getFocus(2,this);chkType(this)"]</arg>
+<arg>${usercode}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-24T00:11:13.491023" elapsed="0.023896"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-24T00:11:13.515921" level="INFO">Fills the text '9907mkmnK' in the given field.</msg>
+<arg>xpath=//input[@onclick="getFocus(3,this);chkType(this)"]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-24T00:11:13.514919" elapsed="0.050496"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-24T00:11:21.580748" level="INFO">Slept 8 seconds.</msg>
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-24T00:11:13.565415" elapsed="8.015333"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>xpath=//input[@onclick="getFocus(3,this);chkType(this)"]</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-24T00:11:21.580748" elapsed="0.173465"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-24T00:11:31.769437" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-07-24T00:11:31.769437" level="INFO">See also file:///C:/Users/mark/Desktop/Robot/playwright-log.txt for additional details.</msg>
+<msg time="2025-07-24T00:11:31.770471" level="FAIL">Error: Could not find active page</msg>
+<arg>xpath=// a[@id='user-logout']</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-07-24T00:11:21.754213" elapsed="10.018226">Error: Could not find active page</status>
+</kw>
+<status status="FAIL" start="2025-07-24T00:11:13.453894" elapsed="18.318545">Error: Could not find active page</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-07-24T00:11:31.772439" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>//button[@id='ctl00_ctl00_ContentPlaceHolder1_DefaultContent__submitButton']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-07-24T00:11:31.773438" elapsed="0.000000"/>
+</kw>
+<kw name="Close Context" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-24T00:11:31.776470" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2025-07-24T00:11:31.777754" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2025-07-24T00:11:31.778787" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg time="2025-07-24T00:11:31.780903" level="INFO">Returned active context id: CURRENT</msg>
+<msg time="2025-07-24T00:11:31.780903" level="INFO">Switching context to context=3b2d14ab-3f69-41a7-b4a3-6c2969579725 in CURRENT</msg>
+<msg time="2025-07-24T00:11:31.783902" level="INFO">Successfully changed active context: context=3b2d14ab-3f69-41a7-b4a3-6c2969579725</msg>
+<msg time="2025-07-24T00:11:31.791683" level="INFO">Successfully closed Context</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<status status="PASS" start="2025-07-24T00:11:31.773438" elapsed="0.018245"/>
+</kw>
+<msg time="2025-07-24T00:11:31.793682" level="INFO">No context open.</msg>
+<status status="FAIL" start="2025-07-24T00:11:12.760734" elapsed="19.030949">Error: Could not find active page</status>
 </test>
-<test id="s1-t2" name="Test Case 002" line="28">
-<kw name="Log To Console" owner="BuiltIn" type="SETUP">
-<arg>message=Setting 的 Test Setup</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.866063" elapsed="0.000000"/>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-24T00:11:31.922154" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-24T00:11:31.796927" elapsed="0.126229"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message=Print Test Case 002</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.867060" elapsed="0.000000"/>
-</kw>
-<kw name="Sum Two Number">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-05-12T00:15:17.868423" level="INFO">${sum} = 6</msg>
-<var>${sum}</var>
-<arg>${num1}+${num2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.868423" elapsed="0.001000"/>
-</kw>
-<return>
-<value>${sum}</value>
-<status status="PASS" start="2025-05-12T00:15:17.869423" elapsed="0.000000"/>
-</return>
-<msg time="2025-05-12T00:15:17.869423" level="INFO">${sum} = 6</msg>
-<var>${sum}</var>
-<arg>num1=3</arg>
-<arg>num2=3</arg>
-<status status="PASS" start="2025-05-12T00:15:17.867060" elapsed="0.002363"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-05-12T00:15:17.870929" level="FAIL">6 != 7</msg>
-<arg>first=${sum}</arg>
-<arg>second=${7}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="FAIL" start="2025-05-12T00:15:17.869423" elapsed="0.001506">6 != 7</status>
-</kw>
-<tag>release</tag>
-<timeout value="5 minutes"/>
-<status status="FAIL" start="2025-05-12T00:15:17.865059" elapsed="0.006872">6 != 7</status>
-</test>
-<test id="s1-t3" name="Test Case 003" line="34">
-<kw name="Log To Console" owner="BuiltIn" type="SETUP">
-<arg>message=Setting 的 Test Setup</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.872933" elapsed="0.001000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message=Print Test Case 003</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.873933" elapsed="0.000999"/>
-</kw>
-<kw name="Sum Two Number">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-05-12T00:15:17.875932" level="INFO">${sum} = 11</msg>
-<var>${sum}</var>
-<arg>${num1}+${num2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.875932" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${sum}</value>
-<status status="PASS" start="2025-05-12T00:15:17.875932" elapsed="0.000000"/>
-</return>
-<msg time="2025-05-12T00:15:17.875932" level="INFO">${sum} = 11</msg>
-<var>${sum}</var>
-<arg>num1=2</arg>
-<arg>num2=9</arg>
-<status status="PASS" start="2025-05-12T00:15:17.874932" elapsed="0.001000"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<arg>first=${sum}</arg>
-<arg>second=${11}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.877437" elapsed="0.000000"/>
-</kw>
-<tag>abc</tag>
-<tag>release</tag>
-<timeout value="5 minutes"/>
-<status status="PASS" start="2025-05-12T00:15:17.872933" elapsed="0.005513"/>
-</test>
-<test id="s1-t4" name="Test Case 004" line="40">
-<kw name="Log To Console" owner="BuiltIn" type="SETUP">
-<arg>message=Setting 的 Test Setup</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.879442" elapsed="0.001003"/>
-</kw>
-<kw name="Log Template">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>msg1=${msg1}</arg>
-<arg>msg2=${msg2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.881447" elapsed="0.000999"/>
-</kw>
-<arg>msg1_1</arg>
-<arg>msg2_1</arg>
-<status status="PASS" start="2025-05-12T00:15:17.880445" elapsed="0.002001"/>
-</kw>
-<kw name="Log Template">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>msg1=${msg1}</arg>
-<arg>msg2=${msg2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.882446" elapsed="0.000999"/>
-</kw>
-<arg>msg1_2</arg>
-<arg>msg2_2</arg>
-<status status="PASS" start="2025-05-12T00:15:17.882446" elapsed="0.000999"/>
-</kw>
-<kw name="Log Template">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>msg1=${msg1}</arg>
-<arg>msg2=${msg2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.884445" elapsed="0.000998"/>
-</kw>
-<arg>msg1_3</arg>
-<arg>msg2_3</arg>
-<status status="PASS" start="2025-05-12T00:15:17.884445" elapsed="0.000998"/>
-</kw>
-<tag>abc</tag>
-<timeout value="5 minutes"/>
-<status status="PASS" start="2025-05-12T00:15:17.879442" elapsed="0.006001"/>
-</test>
-<test id="s1-t5" name="Test Case 005" line="47">
-<kw name="Log To Console" owner="BuiltIn" type="SETUP">
-<arg>message=Setting 的 Test Setup</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.887468" elapsed="0.000000"/>
-</kw>
-<kw name="Sum Two Number">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-05-12T00:15:17.889480" level="INFO">${sum} = 3</msg>
-<var>${sum}</var>
-<arg>${num1}+${num2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.888474" elapsed="0.001006"/>
-</kw>
-<return>
-<value>${sum}</value>
-<status status="PASS" start="2025-05-12T00:15:17.889480" elapsed="0.000000"/>
-</return>
-<msg time="2025-05-12T00:15:17.889480" level="INFO">${sum} = 3</msg>
-<var>${sum}</var>
-<arg>num1=2</arg>
-<status status="PASS" start="2025-05-12T00:15:17.888474" elapsed="0.001006"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>message=${sum}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.890480" elapsed="0.000000"/>
-</kw>
-<tag>abc</tag>
-<timeout value="5 minutes"/>
-<status status="PASS" start="2025-05-12T00:15:17.886950" elapsed="0.004529"/>
-</test>
-<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
-<arg>message=Print Suite Teardown</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-12T00:15:17.892480" elapsed="0.000000"/>
-</kw>
-<doc>My First Robot Framework</doc>
-<meta name="測試 Metadata">Metadata 測試</meta>
-<status status="FAIL" start="2025-05-12T00:15:17.832488" elapsed="0.059992"/>
+<status status="FAIL" start="2025-07-24T00:11:11.848776" elapsed="20.074380"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="4" fail="0" skip="0">abc</stat>
-<stat pass="2" fail="1" skip="0">release</stat>
-<stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="測試 Settings Name" id="s1" pass="4" fail="1" skip="0">測試 Settings Name</stat>
+<stat name="Browser" id="s1" pass="0" fail="1" skip="0">Browser</stat>
 </suite>
 </statistics>
 <errors>

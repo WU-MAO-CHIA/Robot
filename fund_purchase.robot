@@ -65,11 +65,11 @@ Login
     Input Text    xpath=//android.widget.EditText[@text="ID/統一編號"]    ${ID_NUMBER}
 
     # 輸入使用者代碼
-    # Wait Until Element Is Visible    xpath=//android.widget.EditText[@text="6~20 位使用者代碼"]    5s
+    Wait Until Element Is Visible    xpath=//android.widget.EditText[@text="6~20 位使用者代碼"]    5s
     Input Text    xpath=//android.widget.EditText[@text="6~20 位使用者代碼"]    ${USER_CODE}
 
     # 輸入密碼
-    # Wait Until Element Is Visible    xpath=//android.widget.EditText[@text="6~20 位網路密碼"]    5s
+    Wait Until Element Is Visible    xpath=//android.widget.EditText[@text="6~20 位網路密碼"]    5s
     Input Text    xpath=//android.widget.EditText[@text="6~20 位網路密碼"]    ${PASSWORD}
 
     # 點擊登入按鈕
