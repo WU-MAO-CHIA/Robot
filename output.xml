@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-07-24T00:11:11.847270" rpa="false" schemaversion="5">
-<suite id="s1" name="Browser" source="C:\Users\mark\Desktop\Robot\browser.robot">
-<kw name="Suite Setup" type="SETUP">
+<robot generator="Robot 7.2.2 (Python 3.10.0 on win32)" generated="2025-08-10T13:12:06.530635" rpa="false" schemaversion="5">
+<suite id="s1" name="browserTest" source="c:\Users\mark\Desktop\Robot\browserTest.robot">
+<test id="s1-t1" name="Test Example Page" line="15">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-07-24T00:11:12.019922" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\mark\\Desktop\\Robot\\browser\\traces\\temp\\f9c2ea2b-fe7c-4b44-8392-33346619e498"}</msg>
-<msg time="2025-07-24T00:11:12.039190" level="INFO">Starting Browser process C:\Users\mark\Desktop\Robot\env\lib\site-packages\Browser\wrapper\index.js using port 49171</msg>
-<msg time="2025-07-24T00:11:12.039190" level="INFO">Node startup parameters: ['node', 'C:\\Users\\mark\\Desktop\\Robot\\env\\lib\\site-packages\\Browser\\wrapper\\index.js', '49171']</msg>
-<msg time="2025-07-24T00:11:12.760734" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\mark\\Desktop\\Robot\\browser\\traces\\temp\\f9c2ea2b-fe7c-4b44-8392-33346619e498"}</msg>
+<msg time="2025-08-10T13:12:06.824918" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\mark\\Desktop\\Robot\\browser\\traces\\temp\\7d5cf368-4785-4532-b421-5a0bffab3f6d"}</msg>
+<msg time="2025-08-10T13:12:06.897299" level="INFO">Starting Browser process c:\Users\mark\Desktop\Robot\env\lib\site-packages\Browser\wrapper\index.js using port 63243</msg>
+<msg time="2025-08-10T13:12:06.897299" level="INFO">Node startup parameters: ['node', 'c:\\Users\\mark\\Desktop\\Robot\\env\\lib\\site-packages\\Browser\\wrapper\\index.js', '63243']</msg>
+<msg time="2025-08-10T13:12:08.446953" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\mark\\Desktop\\Robot\\browser\\traces\\temp\\7d5cf368-4785-4532-b421-5a0bffab3f6d"}</msg>
 <arg>chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-07-24T00:11:12.019922" elapsed="0.740812"/>
+<status status="PASS" start="2025-08-10T13:12:06.823917" elapsed="1.623036"/>
 </kw>
-<status status="PASS" start="2025-07-24T00:11:12.018917" elapsed="0.741817"/>
-</kw>
-<test id="s1-t1" name="Add One ToDos And Check Items" line="15">
-<kw name="Test Setup" type="SETUP">
 <kw name="New Context" owner="Browser">
-<msg time="2025-07-24T00:11:12.768885" level="INFO">{
+<msg time="2025-08-10T13:12:08.448952" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -29,140 +25,65 @@
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "height": 1080,
-    "width": 1920
+    "height": 720,
+    "width": 1280
   }
 }</msg>
-<msg time="2025-07-24T00:11:12.787052" level="INFO">Successfully created context. </msg>
-<msg time="2025-07-24T00:11:12.787052" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
-<arg>viewport= {'width': 1920, 'height': 1080}</arg>
+<msg time="2025-08-10T13:12:08.466953" level="INFO">Successfully created context. </msg>
+<msg time="2025-08-10T13:12:08.467953" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2025-07-24T00:11:12.766884" elapsed="0.020168"/>
+<status status="PASS" start="2025-08-10T13:12:08.447950" elapsed="0.020003"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-07-24T00:11:13.446709" level="INFO">Successfully initialized new page object and opened url: https://mma.sinopac.com/MemberPortal/Member/MMALogin.aspx</msg>
-<arg>https://mma.sinopac.com/MemberPortal/Member/MMALogin.aspx</arg>
+<msg time="2025-08-10T13:12:09.729411" level="INFO">Successfully initialized new page object and opened url: https://mma.sinopac.com/MemberPortal/Member/NextWebLogin.aspx</msg>
+<arg>https://mma.sinopac.com/MemberPortal/Member/NextWebLogin.aspx</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-07-24T00:11:12.788050" elapsed="0.658659"/>
+<status status="PASS" start="2025-08-10T13:12:08.468951" elapsed="1.260460"/>
 </kw>
-<kw name="Wait For Load State" owner="Browser">
-<msg time="2025-07-24T00:11:13.447709" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
-<msg time="2025-07-24T00:11:13.452893" level="INFO">Load state domcontentloaded got in 10000</msg>
-<arg>domcontentloaded</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits that the page reaches the required load state.</doc>
-<status status="PASS" start="2025-07-24T00:11:13.447709" elapsed="0.005184"/>
-</kw>
-<status status="PASS" start="2025-07-24T00:11:12.765732" elapsed="0.687161"/>
-</kw>
-<kw name="Input Text Into ToDos">
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-07-24T00:11:13.454893" level="INFO">Fills the text 'A128514133' in the given field.</msg>
-<arg>xpath=//input[@onclick="getFocus(1,this);"]</arg>
+<msg time="2025-08-10T13:12:09.731418" level="INFO">Fills the text 'A123456789' in the given field.</msg>
+<arg>//input[@class= 'style1 selectable']</arg>
 <arg>${ID}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-07-24T00:11:13.453894" elapsed="0.037129"/>
+<status status="PASS" start="2025-08-10T13:12:09.730413" elapsed="0.030001"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-07-24T00:11:13.492025" level="INFO">Fills the text 'markwu0821' in the given field.</msg>
-<arg>xpath=//input[@onclick="getFocus(2,this);chkType(this)"]</arg>
-<arg>${usercode}</arg>
+<msg time="2025-08-10T13:12:09.761413" level="INFO">Fills the text '123456' in the given field.</msg>
+<arg>//input[@placeholder= '使用者代碼']</arg>
+<arg>${pwd}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-07-24T00:11:13.491023" elapsed="0.023896"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2025-07-24T00:11:13.515921" level="INFO">Fills the text '9907mkmnK' in the given field.</msg>
-<arg>xpath=//input[@onclick="getFocus(3,this);chkType(this)"]</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-07-24T00:11:13.514919" elapsed="0.050496"/>
+<status status="PASS" start="2025-08-10T13:12:09.760414" elapsed="0.018999"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-24T00:11:21.580748" level="INFO">Slept 8 seconds.</msg>
-<arg>8s</arg>
+<msg time="2025-08-10T13:12:11.793179" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-24T00:11:13.565415" elapsed="8.015333"/>
+<status status="PASS" start="2025-08-10T13:12:09.779413" elapsed="2.013766"/>
 </kw>
-<kw name="Press Keys" owner="Browser">
-<arg>xpath=//input[@onclick="getFocus(3,this);chkType(this)"]</arg>
-<arg>Enter</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" start="2025-07-24T00:11:21.580748" elapsed="0.173465"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-07-24T00:11:31.769437" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-07-24T00:11:31.769437" level="INFO">See also file:///C:/Users/mark/Desktop/Robot/playwright-log.txt for additional details.</msg>
-<msg time="2025-07-24T00:11:31.770471" level="FAIL">Error: Could not find active page</msg>
-<arg>xpath=// a[@id='user-logout']</arg>
-<arg>visible</arg>
-<arg>10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="FAIL" start="2025-07-24T00:11:21.754213" elapsed="10.018226">Error: Could not find active page</status>
-</kw>
-<status status="FAIL" start="2025-07-24T00:11:13.453894" elapsed="18.318545">Error: Could not find active page</status>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-07-24T00:11:31.772439" elapsed="0.000000"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>//button[@id='ctl00_ctl00_ContentPlaceHolder1_DefaultContent__submitButton']</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-07-24T00:11:31.773438" elapsed="0.000000"/>
-</kw>
-<kw name="Close Context" owner="Browser" type="TEARDOWN">
-<msg time="2025-07-24T00:11:31.776470" level="INFO">Switching browser to CURRENT</msg>
-<msg time="2025-07-24T00:11:31.777754" level="INFO">Returned active browser id. CURRENT</msg>
-<msg time="2025-07-24T00:11:31.778787" level="INFO">Switching context to CURRENT in CURRENT</msg>
-<msg time="2025-07-24T00:11:31.780903" level="INFO">Returned active context id: CURRENT</msg>
-<msg time="2025-07-24T00:11:31.780903" level="INFO">Switching context to context=3b2d14ab-3f69-41a7-b4a3-6c2969579725 in CURRENT</msg>
-<msg time="2025-07-24T00:11:31.783902" level="INFO">Successfully changed active context: context=3b2d14ab-3f69-41a7-b4a3-6c2969579725</msg>
-<msg time="2025-07-24T00:11:31.791683" level="INFO">Successfully closed Context</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes a Context.</doc>
-<status status="PASS" start="2025-07-24T00:11:31.773438" elapsed="0.018245"/>
-</kw>
-<msg time="2025-07-24T00:11:31.793682" level="INFO">No context open.</msg>
-<status status="FAIL" start="2025-07-24T00:11:12.760734" elapsed="19.030949">Error: Could not find active page</status>
+<msg time="2025-08-10T13:12:11.797151" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-08-10T13:12:11.809150" level="INFO">Switching context to context=e050c5a9-26d1-446b-92be-63e0e7a7258b in CURRENT</msg>
+<msg time="2025-08-10T13:12:11.815154" level="INFO">Successfully changed active context: context=e050c5a9-26d1-446b-92be-63e0e7a7258b</msg>
+<msg time="2025-08-10T13:12:11.856152" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-08-10T13:12:06.822916" elapsed="4.971235"/>
 </test>
-<kw name="Close Browser" owner="Browser" type="TEARDOWN">
-<msg time="2025-07-24T00:11:31.922154" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-24T00:11:31.796927" elapsed="0.126229"/>
-</kw>
-<status status="FAIL" start="2025-07-24T00:11:11.848776" elapsed="20.074380"/>
+<status status="PASS" start="2025-08-10T13:12:06.534640" elapsed="5.323512"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Browser" id="s1" pass="0" fail="1" skip="0">Browser</stat>
+<stat name="browserTest" id="s1" pass="1" fail="0" skip="0">browserTest</stat>
 </suite>
 </statistics>
 <errors>
